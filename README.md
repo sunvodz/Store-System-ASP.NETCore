@@ -11,10 +11,12 @@
 5.write 
 
 namespace TestASP.NET.Models {
+
     public class Beers {
         public int Id { get; set; }
         public string Name { get; set; }
     }
+    
 }
 
 6.create file BeersController.cs in Controllers
@@ -24,13 +26,21 @@ namespace TestASP.NET.Models {
 8.chagne name 
 
 using System;
+
 using System.Linq;
+
 using Microsoft.AspNetCore.Mvc;
+
 using Microsoft.Extensions.Logging;
+
 namespace SUNVODZ.Controllers
+
 {
+
   public class BeersController : Controller
+  
   {
+  
     ILogger<BeersController> _logger;
     public BeersController(ILogger<BeersController> logger)
     {
@@ -40,7 +50,9 @@ namespace SUNVODZ.Controllers
     {
       return View();
     }
+    
   }
+  
 }
 
 9.create folder Beers in Views
@@ -62,6 +74,7 @@ using TestASP.NET.Models;
 .
 .
        public IActionResult Index()
+       
         {
             return View();
         }
@@ -88,6 +101,7 @@ using TestASP.NET.Models;
 18.Edit Beers.cs in folder Models
 
 namespace TestASP.NET.Models {
+
     public class Beers {
         public int Id { get; set; }
         public string Name { get; set; }
@@ -101,6 +115,7 @@ namespace TestASP.NET.Models {
 .
 .
        public IActionResult ViewBeer()
+       
         {
             Beers _data = new Beers();
             _data.Name = "Chang";
@@ -137,6 +152,7 @@ Price : 55 B
 .
 .
             public IActionResult ViewBeer()
+            
         {
             IEnumerable<Beers> _data = new List<Beers>
             {
@@ -161,6 +177,7 @@ Price : 55 B
 @model IEnumerable<Beers>
 
 @foreach(var item in Model){
+
     <p>Name :@item.Name</p>
     <p>Calorie: @item.Calorie</p>
     <p>Price: @item.Price</p>
@@ -177,6 +194,7 @@ Price : 55 B
 .
 
 public IActionResult Index()
+
         {
             return View();
         }
