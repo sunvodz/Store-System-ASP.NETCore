@@ -6,7 +6,7 @@
 
 3.install extensions C# , WilderMinds' ASP.NET Core Snippets
 
-4.create new C# Class in Models
+4.create new C# Class in Models Beers.cs
 
 5.write 
 
