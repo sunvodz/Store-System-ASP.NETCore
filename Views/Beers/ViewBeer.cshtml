@@ -1,0 +1,9 @@
+@model IEnumerable<Beers>
+
+@foreach(var item in Model){
+   
+    <p>Name :@item.Name</p>
+    <p>Calorie: @item.Calorie</p>
+    <p>Price: @item.Price</p>
+    <p>====================</p>
+}
