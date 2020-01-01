@@ -86,6 +86,7 @@ using TestASP.NET.Models;
         }
 .
 .
+.
 
 15.Create ViewBeer.cshtml in folder Views -> Beers
 
